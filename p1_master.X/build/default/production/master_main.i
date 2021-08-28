@@ -2882,6 +2882,21 @@ void Lcd_Shift_Right(void);
 void Lcd_Shift_Left(void);
 # 17 "master_main.c" 2
 
+# 1 "./USART.h" 1
+
+
+
+
+
+
+
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.31\\pic\\include\\c90\\stdint.h" 1 3
+# 9 "./USART.h" 2
+
+
+void initUSART(void);
+# 18 "master_main.c" 2
 
 
 
@@ -2921,11 +2936,36 @@ uint16_t valor_ADC = 0;
 uint8_t POS1;
 uint8_t POS2;
 uint8_t POS3;
+
+uint8_t POS1_LDR;
+uint8_t POS2_LDR;
+uint8_t POS3_LDR;
+
+uint8_t POS1_TMP;
+uint8_t POS2_TMP;
+uint8_t POS3_TMP;
+
 uint8_t alarma=0;
 uint16_t TEMP=0;
 uint16_t T_byte1;
 
+uint8_t guia = 0x00;
+uint8_t RC_temp;
 
+uint8_t contador;
+uint8_t contador_unidad = 0;
+uint8_t contador_decena = 0;
+uint8_t contador_centena = 0;
+
+uint8_t cont=0;
+uint8_t contador;
+uint8_t val_USART;
+
+uint8_t u_flag = 1;
+uint8_t d_flag = 0;
+uint8_t c_flag = 0;
+uint8_t unidad = 0;
+uint8_t decena = 0;
 
 
 void setup (void);
@@ -2934,9 +2974,111 @@ void moverVentilador();
 void alarmaBuzzer();
 
 void __attribute__((picinterrupt((""))))isr(void){
-    (INTCONbits.GIE = 0);
 
-    (INTCONbits.GIE = 1);
+    if (INTCONbits.T0IF){
+        cont++;
+        INTCONbits.T0IF = 0;
+    }
+
+    if(PIR1bits.RCIF == 1){
+
+        if (RCREG == 0x0D){
+
+            PORTB = 2;
+        }
+
+        if (RCREG != 0x0D){
+        RC_temp = RCREG;
+
+            switch(RC_temp){
+                case 48:
+                    val_USART = 0;
+                    break;
+                case 49:
+                    val_USART = 1;
+                    break;
+                case 50:
+                    val_USART = 2;
+                    break;
+                case 51:
+                    val_USART = 3;
+                    break;
+                case 52:
+                    val_USART = 4;
+                    break;
+                case 53:
+                    val_USART = 5;
+                    break;
+                case 54:
+                    val_USART = 6;
+                    break;
+                case 55:
+                    val_USART = 7;
+                    break;
+                case 56:
+                    val_USART = 8;
+                    break;
+                case 57:
+                    val_USART = 9;
+                    break;
+            }
+
+            if (u_flag == 1){
+                contador = val_USART;
+                unidad = val_USART;
+                u_flag = 0;
+                d_flag = 1;
+            }
+            else if (d_flag == 1){
+                contador = (unidad*10)+val_USART;
+                decena = val_USART;
+                d_flag = 0;
+                c_flag = 1;
+            }
+            else if (c_flag == 1){
+                contador = (unidad*100)+(decena*10)+val_USART;
+                d_flag = 0;
+                c_flag = 1;
+            }
+        }
+    }
+
+    if (TXIF == 1){
+
+        if(guia==0x00){
+            TXREG = POS1_LDR;
+            guia = 0x01;
+        }else if(guia==0x01){
+            TXREG = 46;
+            guia =0x02;
+        } else if(guia==0x02){
+            TXREG = POS2_LDR;
+            guia = 0x03;
+        } else if(guia==0x03){
+            TXREG = POS3_LDR;
+            guia = 0x04;
+        }else if(guia==0x04){
+            TXREG = 0x0D;
+            guia = 0x05;
+        }else if(guia==0x05){
+            TXREG = POS1_TMP;
+            guia = 0x06;
+        } else if(guia==0x06){
+            TXREG = POS2_TMP;
+            guia = 0x07;
+        } else if(guia==0x07){
+            TXREG = POS3_TMP;
+            guia = 0x08;
+        }else if(guia==0x08){
+            TXREG = 0x0D;
+            guia = 0x00;
+        }
+
+
+        TXIF = 0;
+    }
+
+
 }
 
 void main (void){
@@ -2974,17 +3116,23 @@ void main (void){
 
         valor_ADC= valor_ADC*1.961;
         VAL(valor_ADC);
+        POS1_LDR = POS1;
+        POS2_LDR = POS2;
+        POS3_LDR = POS3;
         Lcd_Set_Cursor(2,1);
-        Lcd_Write_Char(POS1);
+        Lcd_Write_Char(POS1_LDR);
         Lcd_Write_Char(46);
-        Lcd_Write_Char(POS2);
-        Lcd_Write_Char(POS3);
+        Lcd_Write_Char(POS2_LDR);
+        Lcd_Write_Char(POS3_LDR);
         Lcd_Write_String("v ");
 
         VAL(T_byte1);
-        Lcd_Write_Char(POS1);
-        Lcd_Write_Char(POS2);
-        Lcd_Write_Char(POS3);
+        POS1_TMP = POS1;
+        POS2_TMP = POS2;
+        POS3_TMP = POS3;
+        Lcd_Write_Char(POS1_TMP);
+        Lcd_Write_Char(POS2_TMP);
+        Lcd_Write_Char(POS3_TMP);
         Lcd_Write_String("\337C  ");
 
         VAL(TEMP);
@@ -2992,10 +3140,34 @@ void main (void){
         Lcd_Write_Char(79);
         Lcd_Write_Char(83);
         Lcd_Write_String("");
+
+
+        if(cont > 15){
+         cont = 0;
+         TXIE = 1;
+        }
+
+
+        if (PORTBbits.RB1 == 1){
+            val_USART = 0;
+            contador = 0;
+            PORTB = 0;
+            u_flag = 1;
+            d_flag = 0;
+            c_flag = 0;
+        }
+
     }
 }
 
 void setup(void){
+
+
+    OSCCONbits.IRCF2 = 1;
+    OSCCONbits.IRCF1 = 1;
+    OSCCONbits.IRCF0 = 1;
+    OSCCONbits.SCS = 1;
+
 
     ANSEL = 0B0000000;
     ANSELH = 0X00;
@@ -3007,17 +3179,40 @@ void setup(void){
 
     PORTA = 0X00;
     PORTB = 0X00;
-    PORTC = 0X00;
+    PORTD = 0X00;
+
     PORTD = 0X00;
     PORTE = 0X00;
 
 
-    OSCCONbits.IRCF2 = 1;
-    OSCCONbits.IRCF1 = 1;
-    OSCCONbits.IRCF0 = 1;
-    OSCCONbits.SCS = 1;
-    INTCONbits.GIE = 0;
-    INTCONbits.PEIE = 0;
+    INTCONbits.GIE = 1;
+    INTCONbits.PEIE = 1;
+
+    INTCONbits.T0IE = 1;
+    INTCONbits.T0IF = 0;
+
+
+
+    TXSTAbits.SYNC = 0;
+    TXSTAbits.BRGH = 1;
+
+    BAUDCTLbits.BRG16 = 1;
+
+    SPBRG = 207;
+    SPBRGH = 0;
+
+    RCSTAbits.SPEN = 1;
+    RCSTAbits.RX9 = 0;
+    RCSTAbits.CREN = 1;
+
+    TXSTAbits.TXEN = 1;
+
+
+    OPTION_REGbits.T0CS = 0;
+    OPTION_REGbits.PSA = 0;
+    OPTION_REGbits.PS = 0b111;
+    TMR0 = 10;
+
     I2C_Master_Init(100000);
 }
 void VAL(uint16_t variable){
