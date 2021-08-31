@@ -146,7 +146,7 @@ void main (void){
             T_byte1 = 0;
         }
         
-        __delay_ms(1000);
+        __delay_ms(900);
     }
 }
 

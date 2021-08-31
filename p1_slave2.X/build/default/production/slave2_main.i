@@ -3025,7 +3025,7 @@ void main (void){
             T_byte1 = 0;
         }
 
-        _delay((unsigned long)((1000)*(8000000/4000.0)));
+        _delay((unsigned long)((900)*(8000000/4000.0)));
     }
 }
 

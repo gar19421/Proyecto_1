@@ -819,8 +819,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 }
 [e :U 168 ]
 "149
-[; ;slave2_main.c: 149:         _delay((unsigned long)((1000)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;slave2_main.c: 149:         _delay((unsigned long)((900)*(8000000/4000.0)));
+[e ( __delay (1 -> * -> -> 900 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
 "150
 [; ;slave2_main.c: 150:     }
 }

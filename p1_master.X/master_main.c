@@ -63,6 +63,10 @@ uint8_t POS1_TMP;
 uint8_t POS2_TMP;
 uint8_t POS3_TMP;
 
+uint8_t POS1_BZ;
+uint8_t POS2_BZ;
+uint8_t POS3_BZ;
+
 uint8_t alarma=0;
 uint16_t TEMP=0;
 uint16_t T_byte1;
@@ -78,12 +82,15 @@ uint8_t contador_centena = 0;
 uint8_t cont=0;
 uint8_t contador;
 uint8_t val_USART;
-  
+uint8_t bandera_buzzer;
+
+
 uint8_t u_flag = 1;
 uint8_t d_flag = 0;
 uint8_t c_flag = 0;
 uint8_t unidad = 0;
 uint8_t decena = 0;
+uint8_t valor_Servo = 0;
 
 //-----------------------------PROTOTIPOS---------------------------------------
 void setup (void);
@@ -189,9 +196,14 @@ void __interrupt()isr(void){
             guia = 0x08;
         }else if(guia==0x08){
             TXREG = 0x0D;
+            guia = 0x09;
+        }else if(guia==0x09){
+            TXREG = bandera_buzzer+48;
+            guia = 0x0A;
+        }else if(guia==0x0A){
+            TXREG = 0x0D;
             guia = 0x00;
         }
-        
         
         TXIF = 0; //Se limpia la bandera
     } 
@@ -211,14 +223,14 @@ void main (void){
         I2C_Master_Write(0x71);     //ESCRIBIMOS A LA DIRECCION PARA LEER ESCLAVO1
         valor_ADC = I2C_Master_Read(0); //AGREGAMOS EL VALOR AL PORTD
         I2C_Master_Stop();          //DETENEMOS LA COMUNICACION
-        __delay_ms(200);
+        __delay_ms(310);
         
         
         I2C_Master_Start();         //INICIALIZAMOS LA COMUNICACION
         I2C_Master_Write(0x81);     //ESCRIBIMOS A LA DIRECCION PARA LEER ESCLAVO2
         T_byte1 = I2C_Master_Read(0); //AGREGAMOS EL VALOR AL CONTADOR
         I2C_Master_Stop();          //DETENEMOS LA COMUNICACION
-        __delay_ms(300);
+        __delay_ms(310);
         
         moverVentilador();
         
@@ -226,24 +238,47 @@ void main (void){
         I2C_Master_Write(0x71);     //ESCRIBIMOS A LA DIRECCION PARA LEER ESCLAVO2
         alarma = I2C_Master_Read(0); //AGREGAMOS EL VALOR AL CONTADOR
         I2C_Master_Stop();          //DETENEMOS LA COMUNICACION
-        __delay_ms(300);
+        __delay_ms(310);
         
         if(alarma==0xFF){
             alarmaBuzzer();
+            bandera_buzzer = 1;
+        }else{
+            bandera_buzzer = 0;
+            POS1_BZ = 45;
+            POS2_BZ = 45;
+            POS3_BZ = 45;
         }
-               
+        
         valor_ADC= valor_ADC*1.961; //MAPEO PARA 5.00V
+                    
+        
         VAL(valor_ADC);             //EXTRAER LOS VALORES DEL ADC
         POS1_LDR = POS1;
         POS2_LDR = POS2;
         POS3_LDR = POS3;
+        
+        // para mover el servo
+        if(valor_ADC>0x190){
+            valor_Servo = 0x00;
+            CCPR2L = (valor_Servo>>1) + 128;//Swift y ajuste de señal
+            CCP2CONbits.DC2B1 = 0;
+            CCP2CONbits.DC2B0 = 0;
+        }else if(valor_ADC<=0x190){
+            valor_Servo = 0xFF;
+            CCPR2L = (valor_Servo>>1) + 128;//Swift y ajuste de señal
+            CCP2CONbits.DC2B1 = 0;
+            CCP2CONbits.DC2B0 = 0;
+        }
+        
+        
         Lcd_Set_Cursor(2,1);        //COLOCAMOS VALORES DEL ADC EN LA LCD
         Lcd_Write_Char(POS1_LDR);
         Lcd_Write_Char(PUNTO);
         Lcd_Write_Char(POS2_LDR);
         Lcd_Write_Char(POS3_LDR);
         Lcd_Write_String("v ");
-        
+                    
         VAL(T_byte1);             //EXTRAER LOS VALORES TEMPERATURA
         POS1_TMP = POS1;
         POS2_TMP = POS2;
@@ -254,12 +289,12 @@ void main (void){
         Lcd_Write_String("\337C  ");
         
         VAL(TEMP);                  //EXTRAER LOS VALORES DE TEMP
-        Lcd_Write_Char(83);
-        Lcd_Write_Char(79);
-        Lcd_Write_Char(83);
+        Lcd_Write_Char(POS1_BZ);
+        Lcd_Write_Char(POS2_BZ);
+        Lcd_Write_Char(POS3_BZ);
         Lcd_Write_String("");
         
-        
+                
         if(cont > 15){ //Se reinicia el contador después de 45ms y se enciende
          cont = 0; //el enable para enviar datos via USART
          TXIE = 1; 
@@ -294,11 +329,12 @@ void setup(void){
     TRISD = 0X00;               //PORTD COMO OUTPUT
     TRISE = 0X00;               //PORTE COMO OUTPUT
     TRISB = 0X00;                //PORTB COMO OUTPUT
+    TRISCbits.TRISC1= 0X00;
     
     PORTA = 0X00;                //LIMPIAMOS EL PUERTOA
     PORTB = 0X00;                //LIMPIAMOS EL PUERTOB 
     PORTD = 0X00;                //LIMPIAMOS EL PUERTOD
-   // PORTC = 0X00;                //LIMPIAMOS EL PUERTOC
+    PORTC = 0X00;                //LIMPIAMOS EL PUERTOC
     PORTD = 0X00;                //LIMPIAMOS EL PUERTOD
     PORTE = 0X00;                //LIMPIAMOS EL PUERTOE
     
@@ -331,6 +367,29 @@ void setup(void){
     OPTION_REGbits.PS = 0b111;        // prescaler 1:256
     TMR0 = 10;
     
+    
+    //Configurar PWM
+    PR2 = 250; //Valor inicial de PR2
+    CCP1CONbits.P1M = 0; //PWM bits de salida
+    CCP1CONbits.CCP1M = 0b00001100; //Se habilita PWM   
+    CCP2CONbits.CCP2M = 0b00001100;   
+    
+    CCPR1L = 0x0F; 
+    CCPR2L = 0x0F;
+    CCP1CONbits.DC1B = 0; //Bits menos significativos del Duty Cycle
+    CCP2CONbits.DC2B1 = 0;
+    CCP2CONbits.DC2B0 = 0;
+    
+    PIR1bits.TMR2IF = 0; //Se limpia la bandera
+    T2CONbits.T2CKPS1 = 1; //Prescaler de 16
+    T2CONbits.T2CKPS0 = 1;
+    T2CONbits.TMR2ON = 1; //Se enciende el TMR2
+    
+    while (!PIR1bits.TMR2IF); //Se espera una interrupción
+    PIR1bits.TMR2IF = 0;
+    
+    
+    
     I2C_Master_Init(100000);        // INICIALIZAR MASTER A FRECUENCIA DE 100kHz
 }
 void VAL(uint16_t variable){        // Función para obtener valor decimal
@@ -362,7 +421,9 @@ void alarmaBuzzer(){
     PORTAbits.RA1 = 1;
     __delay_ms(500);
     PORTAbits.RA1 = 0;
-
+    POS1_BZ = 83;
+    POS2_BZ = 79;
+    POS3_BZ = 83;
         
     
 }

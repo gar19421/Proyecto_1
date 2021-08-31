@@ -11,21 +11,21 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\brand\AppData\Local\Temp\sl28.o
+$C:\Users\brand\AppData\Local\Temp\sdjk.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 C C 3 2
 config CONFIG 4 2007 2007 2 2
 $dist/default/production\p1_slave2.X.production.o
 cinit CODE 0 F F 13 2
-text1 CODE 0 275 275 20 2
-text2 CODE 0 2CE 2CE 1A 2
-text3 CODE 0 1D8 1D8 5B 2
-text4 CODE 0 110 110 69 2
-text5 CODE 0 2B3 2B3 1B 2
-text6 CODE 0 233 233 42 2
-text7 CODE 0 295 295 1E 2
-text8 CODE 0 179 179 5F 2
-maintext CODE 0 22 22 EE 2
+text1 CODE 0 276 276 20 2
+text2 CODE 0 2CF 2CF 1A 2
+text3 CODE 0 1D9 1D9 5B 2
+text4 CODE 0 111 111 69 2
+text5 CODE 0 2B4 2B4 1B 2
+text6 CODE 0 234 234 42 2
+text7 CODE 0 296 296 1E 2
+text8 CODE 0 17A 17A 5F 2
+maintext CODE 0 22 22 EF 2
 cstackCOMMON COMMON 1 70 70 7 1
 cstackBANK0 BANK0 1 20 20 D 1
 intentry CODE 0 4 4 8 2
@@ -47,13 +47,13 @@ BANK1 A0-EF 1
 BANK2 110-16F 1
 BANK3 190-1EF 1
 CONST 3-3 2
-CONST 2E8-1FFF 2
+CONST 2E9-1FFF 2
 ENTRY 3-3 2
-ENTRY 2E8-1FFF 2
+ENTRY 2E9-1FFF 2
 IDLOC 2000-2003 2
 STACK 110-16F 1
 CODE 3-3 2
-CODE 2E8-1FFF 2
+CODE 2E9-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
 SFR2 100-10F 1
@@ -61,9 +61,9 @@ SFR3 180-18F 1
 COMMON 7B-7D 1
 EEDATA 2100-21FF 2
 STRCODE 3-3 2
-STRCODE 2E8-1FFF 2
+STRCODE 2E9-1FFF 2
 STRING 3-3 2
-STRING 2E8-1FFF 2
+STRING 2E9-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
 # The beginning of the section is indicated by %LINETAB.
@@ -78,157 +78,157 @@ STRING 2E8-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\p1_slave2.X.production.o
-F cinit CODE >672:C:\Users\brand\AppData\Local\Temp\sl28.s
-F cinit CODE >675:C:\Users\brand\AppData\Local\Temp\sl28.s
-F cinit CODE >722:C:\Users\brand\AppData\Local\Temp\sl28.s
-10 cinit CODE >723:C:\Users\brand\AppData\Local\Temp\sl28.s
-11 cinit CODE >724:C:\Users\brand\AppData\Local\Temp\sl28.s
-12 cinit CODE >725:C:\Users\brand\AppData\Local\Temp\sl28.s
-13 cinit CODE >728:C:\Users\brand\AppData\Local\Temp\sl28.s
-14 cinit CODE >729:C:\Users\brand\AppData\Local\Temp\sl28.s
-15 cinit CODE >730:C:\Users\brand\AppData\Local\Temp\sl28.s
-16 cinit CODE >731:C:\Users\brand\AppData\Local\Temp\sl28.s
-17 cinit CODE >732:C:\Users\brand\AppData\Local\Temp\sl28.s
-18 cinit CODE >733:C:\Users\brand\AppData\Local\Temp\sl28.s
-19 cinit CODE >734:C:\Users\brand\AppData\Local\Temp\sl28.s
-1A cinit CODE >735:C:\Users\brand\AppData\Local\Temp\sl28.s
-1B cinit CODE >736:C:\Users\brand\AppData\Local\Temp\sl28.s
-1C cinit CODE >737:C:\Users\brand\AppData\Local\Temp\sl28.s
-1D cinit CODE >738:C:\Users\brand\AppData\Local\Temp\sl28.s
-1E cinit CODE >744:C:\Users\brand\AppData\Local\Temp\sl28.s
-1E cinit CODE >746:C:\Users\brand\AppData\Local\Temp\sl28.s
-1F cinit CODE >747:C:\Users\brand\AppData\Local\Temp\sl28.s
+F cinit CODE >672:C:\Users\brand\AppData\Local\Temp\sdjk.s
+F cinit CODE >675:C:\Users\brand\AppData\Local\Temp\sdjk.s
+F cinit CODE >722:C:\Users\brand\AppData\Local\Temp\sdjk.s
+10 cinit CODE >723:C:\Users\brand\AppData\Local\Temp\sdjk.s
+11 cinit CODE >724:C:\Users\brand\AppData\Local\Temp\sdjk.s
+12 cinit CODE >725:C:\Users\brand\AppData\Local\Temp\sdjk.s
+13 cinit CODE >728:C:\Users\brand\AppData\Local\Temp\sdjk.s
+14 cinit CODE >729:C:\Users\brand\AppData\Local\Temp\sdjk.s
+15 cinit CODE >730:C:\Users\brand\AppData\Local\Temp\sdjk.s
+16 cinit CODE >731:C:\Users\brand\AppData\Local\Temp\sdjk.s
+17 cinit CODE >732:C:\Users\brand\AppData\Local\Temp\sdjk.s
+18 cinit CODE >733:C:\Users\brand\AppData\Local\Temp\sdjk.s
+19 cinit CODE >734:C:\Users\brand\AppData\Local\Temp\sdjk.s
+1A cinit CODE >735:C:\Users\brand\AppData\Local\Temp\sdjk.s
+1B cinit CODE >736:C:\Users\brand\AppData\Local\Temp\sdjk.s
+1C cinit CODE >737:C:\Users\brand\AppData\Local\Temp\sdjk.s
+1D cinit CODE >738:C:\Users\brand\AppData\Local\Temp\sdjk.s
+1E cinit CODE >744:C:\Users\brand\AppData\Local\Temp\sdjk.s
+1E cinit CODE >746:C:\Users\brand\AppData\Local\Temp\sdjk.s
+1F cinit CODE >747:C:\Users\brand\AppData\Local\Temp\sdjk.s
 4 intentry CODE >69:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-179 text8 CODE >69:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-179 text8 CODE >78:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-17F text8 CODE >80:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-180 text8 CODE >82:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-188 text8 CODE >83:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-18C text8 CODE >84:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-18D text8 CODE >85:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-18E text8 CODE >86:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-18F text8 CODE >89:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-199 text8 CODE >91:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-19F text8 CODE >93:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-1A0 text8 CODE >94:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-1A1 text8 CODE >95:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-1A7 text8 CODE >97:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-1AC text8 CODE >99:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-1B5 text8 CODE >100:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-1BB text8 CODE >101:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-1BE text8 CODE >102:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-1C2 text8 CODE >103:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-1C3 text8 CODE >104:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-1C8 text8 CODE >105:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-1CE text8 CODE >106:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-1CE text8 CODE >108:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-1D1 text8 CODE >112:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-295 text7 CODE >198:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-295 text7 CODE >200:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-296 text7 CODE >201:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-29B text7 CODE >202:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-2A1 text7 CODE >204:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-2A5 text7 CODE >205:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-2AB text7 CODE >206:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-2AD text7 CODE >207:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-2B2 text7 CODE >209:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-233 text6 CODE >212:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-233 text6 CODE >218:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-234 text6 CODE >220:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-23A text6 CODE >221:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-23F text6 CODE >222:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-245 text6 CODE >223:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-256 text6 CODE >226:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-265 text6 CODE >227:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-269 text6 CODE >229:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-273 text6 CODE >230:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-274 text6 CODE >231:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-2B3 text5 CODE >187:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-2B3 text5 CODE >189:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-2B6 text5 CODE >190:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-2B9 text5 CODE >191:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-2C2 text5 CODE >192:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-2C5 text5 CODE >193:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-2CA text5 CODE >194:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-2CD text5 CODE >195:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-110 text4 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-110 text4 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-113 text4 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-117 text4 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-11C text4 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-11E text4 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-122 text4 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-127 text4 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-12B text4 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-12D text4 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-133 text4 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-135 text4 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-136 text4 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-13D text4 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-141 text4 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-145 text4 CODE >30:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-14C text4 CODE >31:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-156 text4 CODE >32:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-15C text4 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-15D text4 CODE >35:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-164 text4 CODE >36:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-16A text4 CODE >38:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-16F text4 CODE >39:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-174 text4 CODE >40:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-178 text4 CODE >41:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
-1D8 text3 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-1D8 text3 CODE >12:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-1DB text3 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-1DF text3 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-1E4 text3 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-1E6 text3 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-1EA text3 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-1EF text3 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-1F5 text3 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-1F7 text3 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-1F8 text3 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-1FF text3 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-203 text3 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-207 text3 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-211 text3 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-217 text3 CODE >28:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-21E text3 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-224 text3 CODE >31:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-229 text3 CODE >32:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-22E text3 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-232 text3 CODE >34:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
-2CE text2 CODE >93:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\I2C.c
-2CF text2 CODE >95:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\I2C.c
-2D3 text2 CODE >96:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\I2C.c
-2D7 text2 CODE >97:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\I2C.c
-2DB text2 CODE >98:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\I2C.c
-2DD text2 CODE >99:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\I2C.c
-2DE text2 CODE >100:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\I2C.c
-2DF text2 CODE >101:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\I2C.c
-2E0 text2 CODE >102:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\I2C.c
-2E1 text2 CODE >103:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\I2C.c
-2E4 text2 CODE >104:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\I2C.c
-2E7 text2 CODE >105:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\I2C.c
-275 text1 CODE >154:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-275 text1 CODE >156:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-278 text1 CODE >157:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-279 text1 CODE >159:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-27C text1 CODE >160:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-27D text1 CODE >161:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-27E text1 CODE >162:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-27F text1 CODE >164:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-282 text1 CODE >165:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-283 text1 CODE >166:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-284 text1 CODE >167:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-285 text1 CODE >168:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-286 text1 CODE >171:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-289 text1 CODE >172:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-28A text1 CODE >173:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-28B text1 CODE >174:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-28C text1 CODE >177:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-28D text1 CODE >178:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-28E text1 CODE >179:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
-294 text1 CODE >180:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+17A text8 CODE >69:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+17A text8 CODE >78:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+180 text8 CODE >80:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+181 text8 CODE >82:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+189 text8 CODE >83:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+18D text8 CODE >84:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+18E text8 CODE >85:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+18F text8 CODE >86:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+190 text8 CODE >89:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+19A text8 CODE >91:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+1A0 text8 CODE >93:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+1A1 text8 CODE >94:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+1A2 text8 CODE >95:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+1A8 text8 CODE >97:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+1AD text8 CODE >99:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+1B6 text8 CODE >100:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+1BC text8 CODE >101:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+1BF text8 CODE >102:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+1C3 text8 CODE >103:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+1C4 text8 CODE >104:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+1C9 text8 CODE >105:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+1CF text8 CODE >106:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+1CF text8 CODE >108:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+1D2 text8 CODE >112:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+296 text7 CODE >198:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+296 text7 CODE >200:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+297 text7 CODE >201:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+29C text7 CODE >202:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+2A2 text7 CODE >204:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+2A6 text7 CODE >205:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+2AC text7 CODE >206:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+2AE text7 CODE >207:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+2B3 text7 CODE >209:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+234 text6 CODE >212:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+234 text6 CODE >218:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+235 text6 CODE >220:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+23B text6 CODE >221:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+240 text6 CODE >222:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+246 text6 CODE >223:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+257 text6 CODE >226:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+266 text6 CODE >227:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+26A text6 CODE >229:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+274 text6 CODE >230:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+275 text6 CODE >231:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+2B4 text5 CODE >187:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+2B4 text5 CODE >189:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+2B7 text5 CODE >190:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+2BA text5 CODE >191:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+2C3 text5 CODE >192:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+2C6 text5 CODE >193:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+2CB text5 CODE >194:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+2CE text5 CODE >195:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+111 text4 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+111 text4 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+114 text4 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+118 text4 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+11D text4 CODE >16:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+11F text4 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+123 text4 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+128 text4 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+12C text4 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+12E text4 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+134 text4 CODE >24:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+136 text4 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+137 text4 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+13E text4 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+142 text4 CODE >25:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+146 text4 CODE >30:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+14D text4 CODE >31:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+157 text4 CODE >32:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+15D text4 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+15E text4 CODE >35:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+165 text4 CODE >36:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+16B text4 CODE >38:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+170 text4 CODE >39:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+175 text4 CODE >40:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+179 text4 CODE >41:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awdiv.c
+1D9 text3 CODE >5:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+1D9 text3 CODE >12:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+1DC text3 CODE >13:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+1E0 text3 CODE >14:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+1E5 text3 CODE >15:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+1E7 text3 CODE >17:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+1EB text3 CODE >18:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+1F0 text3 CODE >19:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+1F6 text3 CODE >20:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+1F8 text3 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+1F9 text3 CODE >22:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+200 text3 CODE >23:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+204 text3 CODE >21:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+208 text3 CODE >26:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+212 text3 CODE >27:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+218 text3 CODE >28:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+21F text3 CODE >29:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+225 text3 CODE >31:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+22A text3 CODE >32:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+22F text3 CODE >33:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+233 text3 CODE >34:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\awmod.c
+2CF text2 CODE >93:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\I2C.c
+2D0 text2 CODE >95:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\I2C.c
+2D4 text2 CODE >96:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\I2C.c
+2D8 text2 CODE >97:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\I2C.c
+2DC text2 CODE >98:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\I2C.c
+2DE text2 CODE >99:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\I2C.c
+2DF text2 CODE >100:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\I2C.c
+2E0 text2 CODE >101:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\I2C.c
+2E1 text2 CODE >102:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\I2C.c
+2E2 text2 CODE >103:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\I2C.c
+2E5 text2 CODE >104:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\I2C.c
+2E8 text2 CODE >105:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\I2C.c
+276 text1 CODE >154:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+276 text1 CODE >156:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+279 text1 CODE >157:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+27A text1 CODE >159:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+27D text1 CODE >160:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+27E text1 CODE >161:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+27F text1 CODE >162:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+280 text1 CODE >164:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+283 text1 CODE >165:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+284 text1 CODE >166:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+285 text1 CODE >167:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+286 text1 CODE >168:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+287 text1 CODE >171:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+28A text1 CODE >172:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+28B text1 CODE >173:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+28C text1 CODE >174:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+28D text1 CODE >177:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+28E text1 CODE >178:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+28F text1 CODE >179:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
+295 text1 CODE >180:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
 22 maintext CODE >114:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
 22 maintext CODE >115:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
 27 maintext CODE >117:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
@@ -266,7 +266,7 @@ FE maintext CODE >149:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROY
 ___latbits 2 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
 ___awdiv@counter 21 0 BANK0 1 cstackBANK0 dist/default/production\p1_slave2.X.production.o
 __size_of_ReadData 0 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
-__Hspace_0 2E8 0 ABS 0 - -
+__Hspace_0 2E9 0 ABS 0 - -
 __Hspace_1 7B 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
 __Hspace_3 0 0 ABS 0 - -
@@ -275,30 +275,30 @@ __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 _BF 4A0 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _PEIE 5E 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\brand\AppData\Local\Temp\sl28.o
+___sp 0 0 STACK 2 stack C:\Users\brand\AppData\Local\Temp\sdjk.o
 _decT 33 0 BANK0 1 bssBANK0 dist/default/production\p1_slave2.X.production.o
 _main 44 0 CODE 0 maintext dist/default/production\p1_slave2.X.production.o
 _uniT 79 0 COMMON 1 bssCOMMON dist/default/production\p1_slave2.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
-start 18 0 CODE 0 init C:\Users\brand\AppData\Local\Temp\sl28.o
+start 18 0 CODE 0 init C:\Users\brand\AppData\Local\Temp\sdjk.o
 __size_of___awdiv 0 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
 __size_of___awmod 0 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
 __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __Hpowerup 0 0 CODE 0 powerup -
 ___awmod@sign 22 0 BANK0 1 cstackBANK0 dist/default/production\p1_slave2.X.production.o
-_ReadData 466 0 CODE 0 text6 dist/default/production\p1_slave2.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\sl28.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\sl28.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\sl28.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\sl28.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\sl28.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\sl28.o
+_ReadData 468 0 CODE 0 text6 dist/default/production\p1_slave2.X.production.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\sdjk.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\sdjk.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\sdjk.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\sdjk.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\sdjk.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\sdjk.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
-__end_of_ReadData 4EA 0 CODE 0 text6 dist/default/production\p1_slave2.X.production.o
+__end_of_ReadData 4EC 0 CODE 0 text6 dist/default/production\p1_slave2.X.production.o
 ___awdiv@sign 22 0 BANK0 1 cstackBANK0 dist/default/production\p1_slave2.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
 _ADRESH 1E 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
@@ -307,12 +307,12 @@ ___awdiv@dividend 75 0 COMMON 1 cstackCOMMON dist/default/production\p1_slave2.X
 _SSPCONbits 14 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
 ___awdiv@divisor 73 0 COMMON 1 cstackCOMMON dist/default/production\p1_slave2.X.production.o
-__end_of___awdiv 2F2 0 CODE 0 text4 dist/default/production\p1_slave2.X.production.o
-__end_of___awmod 466 0 CODE 0 text3 dist/default/production\p1_slave2.X.production.o
+__end_of___awdiv 2F4 0 CODE 0 text4 dist/default/production\p1_slave2.X.production.o
+__end_of___awmod 468 0 CODE 0 text3 dist/default/production\p1_slave2.X.production.o
 __size_of_StartSignal 0 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\brand\AppData\Local\Temp\sl28.o
-___stacklo 0 0 ABS 0 - C:\Users\brand\AppData\Local\Temp\sl28.o
-_I2C_Slave_Init 59C 0 CODE 0 text2 dist/default/production\p1_slave2.X.production.o
+___stackhi 0 0 ABS 0 - C:\Users\brand\AppData\Local\Temp\sdjk.o
+___stacklo 0 0 ABS 0 - C:\Users\brand\AppData\Local\Temp\sdjk.o
+_I2C_Slave_Init 59E 0 CODE 0 text2 dist/default/production\p1_slave2.X.production.o
 __size_of_setup 0 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
 _T_byte1 78 0 COMMON 1 bssCOMMON dist/default/production\p1_slave2.X.production.o
 _T_byte2 30 0 BANK0 1 bssBANK0 dist/default/production\p1_slave2.X.production.o
@@ -327,13 +327,13 @@ _TRISC3 43B 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
 _TRISC4 43C 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
 _RH_byte1 77 0 COMMON 1 bssCOMMON dist/default/production\p1_slave2.X.production.o
 _RH_byte2 2F 0 BANK0 1 bssBANK0 dist/default/production\p1_slave2.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\brand\AppData\Local\Temp\sl28.o
+___int_sp 0 0 STACK 2 stack C:\Users\brand\AppData\Local\Temp\sdjk.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
 __Hbank3 0 0 ABS 0 bank3 -
 __Hcinit 44 0 CODE 0 cinit -
-__end_of_I2C_Slave_Init 5D0 0 CODE 0 text2 dist/default/production\p1_slave2.X.production.o
+__end_of_I2C_Slave_Init 5D2 0 CODE 0 text2 dist/default/production\p1_slave2.X.production.o
 __Hstack 0 0 STACK 2 stack -
 __Hmaintext 0 0 ABS 0 maintext -
 __Hcommon 0 0 ABS 0 common -
@@ -366,27 +366,27 @@ __LcstackBANK0 0 0 ABS 0 cstackBANK0 -
 __HcstackCOMMON 0 0 ABS 0 cstackCOMMON -
 _GIE 5F 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
 _Sum 2D 0 BANK0 1 bssBANK0 dist/default/production\p1_slave2.X.production.o
-__S0 2E8 0 ABS 0 - -
+__S0 2E9 0 ABS 0 - -
 __S1 7B 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __S3 0 0 ABS 0 - -
-_isr 2F2 0 CODE 0 text8 dist/default/production\p1_slave2.X.production.o
+_isr 2F4 0 CODE 0 text8 dist/default/production\p1_slave2.X.production.o
 _var 34 0 BANK0 1 bssBANK0 dist/default/production\p1_slave2.X.production.o
 saved_w 7E 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
-__end_of_isr 3B0 0 CODE 0 text8 dist/default/production\p1_slave2.X.production.o
+__end_of_isr 3B2 0 CODE 0 text8 dist/default/production\p1_slave2.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\brand\AppData\Local\Temp\sl28.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\brand\AppData\Local\Temp\sdjk.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
-_StartSignal 566 0 CODE 0 text5 dist/default/production\p1_slave2.X.production.o
+_StartSignal 568 0 CODE 0 text5 dist/default/production\p1_slave2.X.production.o
 ___awmod@counter 21 0 BANK0 1 cstackBANK0 dist/default/production\p1_slave2.X.production.o
 _PIE1bits 8C 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
-___awdiv 220 0 CODE 0 text4 dist/default/production\p1_slave2.X.production.o
-___awmod 3B0 0 CODE 0 text3 dist/default/production\p1_slave2.X.production.o
+___awdiv 222 0 CODE 0 text4 dist/default/production\p1_slave2.X.production.o
+___awmod 3B2 0 CODE 0 text3 dist/default/production\p1_slave2.X.production.o
 __pmaintext 44 0 CODE 0 maintext dist/default/production\p1_slave2.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 0 0 CONFIG 4 config -
 I2C_Slave_Init@address 73 0 COMMON 1 cstackCOMMON dist/default/production\p1_slave2.X.production.o
-_CheckResponse 52A 0 CODE 0 text7 dist/default/production\p1_slave2.X.production.o
+_CheckResponse 52C 0 CODE 0 text7 dist/default/production\p1_slave2.X.production.o
 _ADCON0bits 1F 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
 _ADCON1bits 9F 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
 ReadData@i 75 0 COMMON 1 cstackCOMMON dist/default/production\p1_slave2.X.production.o
@@ -411,14 +411,14 @@ __Hreset_vec 6 0 CODE 0 reset_vec -
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
 ___awmod@dividend 75 0 COMMON 1 cstackCOMMON dist/default/production\p1_slave2.X.production.o
 _SSPCON2bits 91 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
-__ptext1 4EA 0 CODE 0 text1 dist/default/production\p1_slave2.X.production.o
-__ptext2 59C 0 CODE 0 text2 dist/default/production\p1_slave2.X.production.o
-__ptext3 3B0 0 CODE 0 text3 dist/default/production\p1_slave2.X.production.o
-__ptext4 220 0 CODE 0 text4 dist/default/production\p1_slave2.X.production.o
-__ptext5 566 0 CODE 0 text5 dist/default/production\p1_slave2.X.production.o
-__ptext6 466 0 CODE 0 text6 dist/default/production\p1_slave2.X.production.o
-__ptext7 52A 0 CODE 0 text7 dist/default/production\p1_slave2.X.production.o
-__ptext8 2F2 0 CODE 0 text8 dist/default/production\p1_slave2.X.production.o
+__ptext1 4EC 0 CODE 0 text1 dist/default/production\p1_slave2.X.production.o
+__ptext2 59E 0 CODE 0 text2 dist/default/production\p1_slave2.X.production.o
+__ptext3 3B2 0 CODE 0 text3 dist/default/production\p1_slave2.X.production.o
+__ptext4 222 0 CODE 0 text4 dist/default/production\p1_slave2.X.production.o
+__ptext5 568 0 CODE 0 text5 dist/default/production\p1_slave2.X.production.o
+__ptext6 468 0 CODE 0 text6 dist/default/production\p1_slave2.X.production.o
+__ptext7 52C 0 CODE 0 text7 dist/default/production\p1_slave2.X.production.o
+__ptext8 2F4 0 CODE 0 text8 dist/default/production\p1_slave2.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __Lreset_vec 0 0 CODE 0 reset_vec -
@@ -432,7 +432,7 @@ __size_of_CheckResponse 0 0 ABS 0 - dist/default/production\p1_slave2.X.producti
 _SSPCON2 91 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
 _SSPSTAT 94 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
 __Hend_init 1E 0 CODE 0 end_init -
-__end_of_main 220 0 CODE 0 maintext dist/default/production\p1_slave2.X.production.o
+__end_of_main 222 0 CODE 0 maintext dist/default/production\p1_slave2.X.production.o
 _ANSEL 188 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
 _Check 7A 0 COMMON 1 bssCOMMON dist/default/production\p1_slave2.X.production.o
 _PORTA 5 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
@@ -446,20 +446,20 @@ _TRISA 85 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
 _TRISB 86 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
 _TRISD 88 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
 _TRISE 89 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
-__end_of_setup 52A 0 CODE 0 text1 dist/default/production\p1_slave2.X.production.o
+__end_of_setup 52C 0 CODE 0 text1 dist/default/production\p1_slave2.X.production.o
 __Hram 0 0 ABS 0 ram -
 __Lram 0 0 ABS 0 ram -
 interrupt_function 8 0 CODE 0 intentry dist/default/production\p1_slave2.X.production.o
 _decHR 31 0 BANK0 1 bssBANK0 dist/default/production\p1_slave2.X.production.o
-_setup 4EA 0 CODE 0 text1 dist/default/production\p1_slave2.X.production.o
+_setup 4EC 0 CODE 0 text1 dist/default/production\p1_slave2.X.production.o
 _uniHR 32 0 BANK0 1 bssBANK0 dist/default/production\p1_slave2.X.production.o
 _SSPSTATbits 94 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
 __pintentry 8 0 CODE 0 intentry dist/default/production\p1_slave2.X.production.o
 __size_of_isr 0 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
 __initialization 1E 0 CODE 0 cinit dist/default/production\p1_slave2.X.production.o
 __pbssBANK0 2D 0 BANK0 1 bssBANK0 dist/default/production\p1_slave2.X.production.o
-__end_of_CheckResponse 566 0 CODE 0 text7 dist/default/production\p1_slave2.X.production.o
-__end_of_StartSignal 59C 0 CODE 0 text5 dist/default/production\p1_slave2.X.production.o
+__end_of_CheckResponse 568 0 CODE 0 text7 dist/default/production\p1_slave2.X.production.o
+__end_of_StartSignal 59E 0 CODE 0 text5 dist/default/production\p1_slave2.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -487,7 +487,7 @@ __end_of_StartSignal 59C 0 CODE 0 text5 dist/default/production\p1_slave2.X.prod
 %SEGMENTS
 cstackCOMMON 1 70 70 B 1
 cstackBANK0 1 20 20 16 1
-intentry 0 4 8 2E4 2
+intentry 0 4 8 2E5 2
 reset_vec 0 0 0 3 2
 # %NOTES Section
 # This section contains data of all the note-psects.  The beginning of the section

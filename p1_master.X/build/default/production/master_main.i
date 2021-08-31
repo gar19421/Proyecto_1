@@ -2945,6 +2945,10 @@ uint8_t POS1_TMP;
 uint8_t POS2_TMP;
 uint8_t POS3_TMP;
 
+uint8_t POS1_BZ;
+uint8_t POS2_BZ;
+uint8_t POS3_BZ;
+
 uint8_t alarma=0;
 uint16_t TEMP=0;
 uint16_t T_byte1;
@@ -2960,12 +2964,15 @@ uint8_t contador_centena = 0;
 uint8_t cont=0;
 uint8_t contador;
 uint8_t val_USART;
+uint8_t bandera_buzzer;
+
 
 uint8_t u_flag = 1;
 uint8_t d_flag = 0;
 uint8_t c_flag = 0;
 uint8_t unidad = 0;
 uint8_t decena = 0;
+uint8_t valor_Servo = 0;
 
 
 void setup (void);
@@ -3071,9 +3078,14 @@ void __attribute__((picinterrupt((""))))isr(void){
             guia = 0x08;
         }else if(guia==0x08){
             TXREG = 0x0D;
+            guia = 0x09;
+        }else if(guia==0x09){
+            TXREG = bandera_buzzer+48;
+            guia = 0x0A;
+        }else if(guia==0x0A){
+            TXREG = 0x0D;
             guia = 0x00;
         }
-
 
         TXIF = 0;
     }
@@ -3093,14 +3105,14 @@ void main (void){
         I2C_Master_Write(0x71);
         valor_ADC = I2C_Master_Read(0);
         I2C_Master_Stop();
-        _delay((unsigned long)((200)*(8000000/4000.0)));
+        _delay((unsigned long)((310)*(8000000/4000.0)));
 
 
         I2C_Master_Start();
         I2C_Master_Write(0x81);
         T_byte1 = I2C_Master_Read(0);
         I2C_Master_Stop();
-        _delay((unsigned long)((300)*(8000000/4000.0)));
+        _delay((unsigned long)((310)*(8000000/4000.0)));
 
         moverVentilador();
 
@@ -3108,17 +3120,40 @@ void main (void){
         I2C_Master_Write(0x71);
         alarma = I2C_Master_Read(0);
         I2C_Master_Stop();
-        _delay((unsigned long)((300)*(8000000/4000.0)));
+        _delay((unsigned long)((310)*(8000000/4000.0)));
 
         if(alarma==0xFF){
             alarmaBuzzer();
+            bandera_buzzer = 1;
+        }else{
+            bandera_buzzer = 0;
+            POS1_BZ = 45;
+            POS2_BZ = 45;
+            POS3_BZ = 45;
         }
 
         valor_ADC= valor_ADC*1.961;
+
+
         VAL(valor_ADC);
         POS1_LDR = POS1;
         POS2_LDR = POS2;
         POS3_LDR = POS3;
+
+
+        if(valor_ADC>0x190){
+            valor_Servo = 0x00;
+            CCPR2L = (valor_Servo>>1) + 128;
+            CCP2CONbits.DC2B1 = 0;
+            CCP2CONbits.DC2B0 = 0;
+        }else if(valor_ADC<=0x190){
+            valor_Servo = 0xFF;
+            CCPR2L = (valor_Servo>>1) + 128;
+            CCP2CONbits.DC2B1 = 0;
+            CCP2CONbits.DC2B0 = 0;
+        }
+
+
         Lcd_Set_Cursor(2,1);
         Lcd_Write_Char(POS1_LDR);
         Lcd_Write_Char(46);
@@ -3136,9 +3171,9 @@ void main (void){
         Lcd_Write_String("\337C  ");
 
         VAL(TEMP);
-        Lcd_Write_Char(83);
-        Lcd_Write_Char(79);
-        Lcd_Write_Char(83);
+        Lcd_Write_Char(POS1_BZ);
+        Lcd_Write_Char(POS2_BZ);
+        Lcd_Write_Char(POS3_BZ);
         Lcd_Write_String("");
 
 
@@ -3176,11 +3211,12 @@ void setup(void){
     TRISD = 0X00;
     TRISE = 0X00;
     TRISB = 0X00;
+    TRISCbits.TRISC1= 0X00;
 
     PORTA = 0X00;
     PORTB = 0X00;
     PORTD = 0X00;
-
+    PORTC = 0X00;
     PORTD = 0X00;
     PORTE = 0X00;
 
@@ -3213,6 +3249,29 @@ void setup(void){
     OPTION_REGbits.PS = 0b111;
     TMR0 = 10;
 
+
+
+    PR2 = 250;
+    CCP1CONbits.P1M = 0;
+    CCP1CONbits.CCP1M = 0b00001100;
+    CCP2CONbits.CCP2M = 0b00001100;
+
+    CCPR1L = 0x0F;
+    CCPR2L = 0x0F;
+    CCP1CONbits.DC1B = 0;
+    CCP2CONbits.DC2B1 = 0;
+    CCP2CONbits.DC2B0 = 0;
+
+    PIR1bits.TMR2IF = 0;
+    T2CONbits.T2CKPS1 = 1;
+    T2CONbits.T2CKPS0 = 1;
+    T2CONbits.TMR2ON = 1;
+
+    while (!PIR1bits.TMR2IF);
+    PIR1bits.TMR2IF = 0;
+
+
+
     I2C_Master_Init(100000);
 }
 void VAL(uint16_t variable){
@@ -3244,7 +3303,9 @@ void alarmaBuzzer(){
     PORTAbits.RA1 = 1;
     _delay((unsigned long)((500)*(8000000/4000.0)));
     PORTAbits.RA1 = 0;
-
+    POS1_BZ = 83;
+    POS2_BZ = 79;
+    POS3_BZ = 83;
 
 
 }
