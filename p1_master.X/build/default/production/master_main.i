@@ -2955,6 +2955,7 @@ uint16_t T_byte1;
 
 uint8_t guia = 0x00;
 uint8_t RC_temp;
+uint8_t bandera=0x00;
 
 uint8_t contador;
 uint8_t contador_unidad = 0;
@@ -2991,6 +2992,7 @@ void __attribute__((picinterrupt((""))))isr(void){
 
         if (RCREG == 0x0D){
 
+            bandera = contador;
             PORTB = 2;
         }
 
@@ -3065,7 +3067,7 @@ void __attribute__((picinterrupt((""))))isr(void){
             TXREG = POS3_LDR;
             guia = 0x04;
         }else if(guia==0x04){
-            TXREG = 0x0D;
+            TXREG = 0x2D;
             guia = 0x05;
         }else if(guia==0x05){
             TXREG = POS1_TMP;
@@ -3077,7 +3079,7 @@ void __attribute__((picinterrupt((""))))isr(void){
             TXREG = POS3_TMP;
             guia = 0x08;
         }else if(guia==0x08){
-            TXREG = 0x0D;
+            TXREG = 0x2D;
             guia = 0x09;
         }else if(guia==0x09){
             TXREG = bandera_buzzer+48;
@@ -3140,18 +3142,35 @@ void main (void){
         POS2_LDR = POS2;
         POS3_LDR = POS3;
 
+        if(bandera==0x00){
 
-        if(valor_ADC>0x190){
-            valor_Servo = 0x00;
-            CCPR2L = (valor_Servo>>1) + 128;
-            CCP2CONbits.DC2B1 = 0;
-            CCP2CONbits.DC2B0 = 0;
-        }else if(valor_ADC<=0x190){
-            valor_Servo = 0xFF;
-            CCPR2L = (valor_Servo>>1) + 128;
-            CCP2CONbits.DC2B1 = 0;
-            CCP2CONbits.DC2B0 = 0;
+            if(valor_ADC>0x190){
+                valor_Servo = 0x00;
+                CCPR2L = (valor_Servo>>1) + 128;
+                CCP2CONbits.DC2B1 = 0;
+                CCP2CONbits.DC2B0 = 0;
+            }else if(valor_ADC<=0x190){
+                valor_Servo = 0xFF;
+                CCPR2L = (valor_Servo>>1) + 128;
+                CCP2CONbits.DC2B1 = 0;
+                CCP2CONbits.DC2B0 = 0;
+            }
+
+        }else{
+            if(bandera==0x01){
+                valor_Servo = 0x00;
+                CCPR2L = (valor_Servo>>1) + 128;
+                CCP2CONbits.DC2B1 = 0;
+                CCP2CONbits.DC2B0 = 0;
+            }else if(bandera==0x02){
+                valor_Servo = 0xFF;
+                CCPR2L = (valor_Servo>>1) + 128;
+                CCP2CONbits.DC2B1 = 0;
+                CCP2CONbits.DC2B0 = 0;
+            }
+
         }
+
 
 
         Lcd_Set_Cursor(2,1);

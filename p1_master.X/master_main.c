@@ -73,6 +73,7 @@ uint16_t T_byte1;
 
 uint8_t guia = 0x00;
 uint8_t RC_temp;
+uint8_t bandera=0x00;
 
 uint8_t contador;
 uint8_t contador_unidad = 0;
@@ -109,6 +110,7 @@ void __interrupt()isr(void){
         //0x0A para el salto de linea \n
         if (RCREG ==  0x0D){
             //PORTD = contador;
+            bandera = contador;
             PORTB = 2;
         }
         
@@ -183,7 +185,7 @@ void __interrupt()isr(void){
             TXREG = POS3_LDR;
             guia = 0x04;
         }else if(guia==0x04){
-            TXREG = 0x0D;
+            TXREG = 0x2D;
             guia = 0x05;
         }else if(guia==0x05){
             TXREG = POS1_TMP;
@@ -195,7 +197,7 @@ void __interrupt()isr(void){
             TXREG = POS3_TMP;
             guia = 0x08;
         }else if(guia==0x08){
-            TXREG = 0x0D;
+            TXREG = 0x2D;
             guia = 0x09;
         }else if(guia==0x09){
             TXREG = bandera_buzzer+48;
@@ -258,18 +260,35 @@ void main (void){
         POS2_LDR = POS2;
         POS3_LDR = POS3;
         
-        // para mover el servo
-        if(valor_ADC>0x190){
-            valor_Servo = 0x00;
-            CCPR2L = (valor_Servo>>1) + 128;//Swift y ajuste de señal
-            CCP2CONbits.DC2B1 = 0;
-            CCP2CONbits.DC2B0 = 0;
-        }else if(valor_ADC<=0x190){
-            valor_Servo = 0xFF;
-            CCPR2L = (valor_Servo>>1) + 128;//Swift y ajuste de señal
-            CCP2CONbits.DC2B1 = 0;
-            CCP2CONbits.DC2B0 = 0;
+        if(bandera==0x00){
+            // para mover el servo
+            if(valor_ADC>0x190){
+                valor_Servo = 0x00;
+                CCPR2L = (valor_Servo>>1) + 128;//Swift y ajuste de señal
+                CCP2CONbits.DC2B1 = 0;
+                CCP2CONbits.DC2B0 = 0;
+            }else if(valor_ADC<=0x190){
+                valor_Servo = 0xFF;
+                CCPR2L = (valor_Servo>>1) + 128;//Swift y ajuste de señal
+                CCP2CONbits.DC2B1 = 0;
+                CCP2CONbits.DC2B0 = 0;
+            }
+            
+        }else{
+            if(bandera==0x01){
+                valor_Servo = 0x00;
+                CCPR2L = (valor_Servo>>1) + 128;//Swift y ajuste de señal
+                CCP2CONbits.DC2B1 = 0;
+                CCP2CONbits.DC2B0 = 0;
+            }else if(bandera==0x02){
+                valor_Servo = 0xFF;
+                CCPR2L = (valor_Servo>>1) + 128;//Swift y ajuste de señal
+                CCP2CONbits.DC2B1 = 0;
+                CCP2CONbits.DC2B0 = 0;
+            }
+            
         }
+        
         
         
         Lcd_Set_Cursor(2,1);        //COLOCAMOS VALORES DEL ADC EN LA LCD
