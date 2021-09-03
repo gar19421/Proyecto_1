@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\brand\AppData\Local\Temp\sg48.o
+$C:\Users\brand\AppData\Local\Temp\s5tk.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 E E 3 2
 config CONFIG 4 2007 2007 2 2
@@ -103,29 +103,29 @@ STRING 1000-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\p1_master.X.production.o
-11 cinit CODE >1113:C:\Users\brand\AppData\Local\Temp\sg48.s
-11 cinit CODE >1116:C:\Users\brand\AppData\Local\Temp\sg48.s
-11 cinit CODE >1232:C:\Users\brand\AppData\Local\Temp\sg48.s
-16 cinit CODE >1233:C:\Users\brand\AppData\Local\Temp\sg48.s
-17 cinit CODE >1252:C:\Users\brand\AppData\Local\Temp\sg48.s
-18 cinit CODE >1253:C:\Users\brand\AppData\Local\Temp\sg48.s
-19 cinit CODE >1254:C:\Users\brand\AppData\Local\Temp\sg48.s
-1A cinit CODE >1255:C:\Users\brand\AppData\Local\Temp\sg48.s
-1B cinit CODE >1256:C:\Users\brand\AppData\Local\Temp\sg48.s
-1C cinit CODE >1257:C:\Users\brand\AppData\Local\Temp\sg48.s
-1D cinit CODE >1258:C:\Users\brand\AppData\Local\Temp\sg48.s
-1E cinit CODE >1259:C:\Users\brand\AppData\Local\Temp\sg48.s
-1F cinit CODE >1262:C:\Users\brand\AppData\Local\Temp\sg48.s
-20 cinit CODE >1263:C:\Users\brand\AppData\Local\Temp\sg48.s
-21 cinit CODE >1264:C:\Users\brand\AppData\Local\Temp\sg48.s
-22 cinit CODE >1265:C:\Users\brand\AppData\Local\Temp\sg48.s
-23 cinit CODE >1266:C:\Users\brand\AppData\Local\Temp\sg48.s
-28 cinit CODE >1269:C:\Users\brand\AppData\Local\Temp\sg48.s
-29 cinit CODE >1270:C:\Users\brand\AppData\Local\Temp\sg48.s
-2A cinit CODE >1271:C:\Users\brand\AppData\Local\Temp\sg48.s
-2B cinit CODE >1277:C:\Users\brand\AppData\Local\Temp\sg48.s
-2B cinit CODE >1279:C:\Users\brand\AppData\Local\Temp\sg48.s
-2C cinit CODE >1280:C:\Users\brand\AppData\Local\Temp\sg48.s
+11 cinit CODE >1113:C:\Users\brand\AppData\Local\Temp\s5tk.s
+11 cinit CODE >1116:C:\Users\brand\AppData\Local\Temp\s5tk.s
+11 cinit CODE >1232:C:\Users\brand\AppData\Local\Temp\s5tk.s
+16 cinit CODE >1233:C:\Users\brand\AppData\Local\Temp\s5tk.s
+17 cinit CODE >1252:C:\Users\brand\AppData\Local\Temp\s5tk.s
+18 cinit CODE >1253:C:\Users\brand\AppData\Local\Temp\s5tk.s
+19 cinit CODE >1254:C:\Users\brand\AppData\Local\Temp\s5tk.s
+1A cinit CODE >1255:C:\Users\brand\AppData\Local\Temp\s5tk.s
+1B cinit CODE >1256:C:\Users\brand\AppData\Local\Temp\s5tk.s
+1C cinit CODE >1257:C:\Users\brand\AppData\Local\Temp\s5tk.s
+1D cinit CODE >1258:C:\Users\brand\AppData\Local\Temp\s5tk.s
+1E cinit CODE >1259:C:\Users\brand\AppData\Local\Temp\s5tk.s
+1F cinit CODE >1262:C:\Users\brand\AppData\Local\Temp\s5tk.s
+20 cinit CODE >1263:C:\Users\brand\AppData\Local\Temp\s5tk.s
+21 cinit CODE >1264:C:\Users\brand\AppData\Local\Temp\s5tk.s
+22 cinit CODE >1265:C:\Users\brand\AppData\Local\Temp\s5tk.s
+23 cinit CODE >1266:C:\Users\brand\AppData\Local\Temp\s5tk.s
+28 cinit CODE >1269:C:\Users\brand\AppData\Local\Temp\s5tk.s
+29 cinit CODE >1270:C:\Users\brand\AppData\Local\Temp\s5tk.s
+2A cinit CODE >1271:C:\Users\brand\AppData\Local\Temp\s5tk.s
+2B cinit CODE >1277:C:\Users\brand\AppData\Local\Temp\s5tk.s
+2B cinit CODE >1279:C:\Users\brand\AppData\Local\Temp\s5tk.s
+2C cinit CODE >1280:C:\Users\brand\AppData\Local\Temp\s5tk.s
 4 intentry CODE >102:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_master.X\master_main.c
 C2F text26 CODE >4:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c
 C30 text26 CODE >6:C:\Program Files\Microchip\xc8\v2.31\pic\sources\c90\common\Umul8.c
@@ -658,16 +658,16 @@ F0F text1 CODE >413:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYEC
 5A3 maintext CODE >327:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_master.X\master_main.c
 5A5 maintext CODE >328:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_master.X\master_main.c
 5A6 maintext CODE >329:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_master.X\master_main.c
-BDE clrtext CODE >1239:C:\Users\brand\AppData\Local\Temp\sg48.s
-BDE clrtext CODE >1240:C:\Users\brand\AppData\Local\Temp\sg48.s
-BDF clrtext CODE >1241:C:\Users\brand\AppData\Local\Temp\sg48.s
-BDF clrtext CODE >1242:C:\Users\brand\AppData\Local\Temp\sg48.s
-BE0 clrtext CODE >1243:C:\Users\brand\AppData\Local\Temp\sg48.s
-BE1 clrtext CODE >1244:C:\Users\brand\AppData\Local\Temp\sg48.s
-BE2 clrtext CODE >1245:C:\Users\brand\AppData\Local\Temp\sg48.s
-BE3 clrtext CODE >1246:C:\Users\brand\AppData\Local\Temp\sg48.s
-BE4 clrtext CODE >1247:C:\Users\brand\AppData\Local\Temp\sg48.s
-BE5 clrtext CODE >1248:C:\Users\brand\AppData\Local\Temp\sg48.s
+BDE clrtext CODE >1239:C:\Users\brand\AppData\Local\Temp\s5tk.s
+BDE clrtext CODE >1240:C:\Users\brand\AppData\Local\Temp\s5tk.s
+BDF clrtext CODE >1241:C:\Users\brand\AppData\Local\Temp\s5tk.s
+BDF clrtext CODE >1242:C:\Users\brand\AppData\Local\Temp\s5tk.s
+BE0 clrtext CODE >1243:C:\Users\brand\AppData\Local\Temp\s5tk.s
+BE1 clrtext CODE >1244:C:\Users\brand\AppData\Local\Temp\s5tk.s
+BE2 clrtext CODE >1245:C:\Users\brand\AppData\Local\Temp\s5tk.s
+BE3 clrtext CODE >1246:C:\Users\brand\AppData\Local\Temp\s5tk.s
+BE4 clrtext CODE >1247:C:\Users\brand\AppData\Local\Temp\s5tk.s
+BE5 clrtext CODE >1248:C:\Users\brand\AppData\Local\Temp\s5tk.s
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -702,13 +702,13 @@ _POS3 6C 0 BANK0 1 bssBANK0 dist/default/production\p1_master.X.production.o
 _TMR0 1 0 ABS 0 - dist/default/production\p1_master.X.production.o
 _TXIE 464 0 ABS 0 - dist/default/production\p1_master.X.production.o
 _TXIF 64 0 ABS 0 - dist/default/production\p1_master.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\brand\AppData\Local\Temp\sg48.o
+___sp 0 0 STACK 2 stack C:\Users\brand\AppData\Local\Temp\s5tk.o
 _cont 5E 0 BANK0 1 bssBANK0 dist/default/production\p1_master.X.production.o
 _guia 7C 0 COMMON 1 bssCOMMON dist/default/production\p1_master.X.production.o
 _main 720 0 CODE 0 maintext dist/default/production\p1_master.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\p1_master.X.production.o
 _Lcd_Write_Char 18C0 0 CODE 0 text14 dist/default/production\p1_master.X.production.o
-start 1C 0 CODE 0 init C:\Users\brand\AppData\Local\Temp\sg48.o
+start 1C 0 CODE 0 init C:\Users\brand\AppData\Local\Temp\s5tk.o
 ___flmul@aexp 40 0 BANK0 1 cstackBANK0 dist/default/production\p1_master.X.production.o
 ___flmul@bexp 41 0 BANK0 1 cstackBANK0 dist/default/production\p1_master.X.production.o
 ___flmul@prod 42 0 BANK0 1 cstackBANK0 dist/default/production\p1_master.X.production.o
@@ -728,12 +728,12 @@ __LidataBANK0 0 0 ABS 0 idataBANK0 -
 __Hpowerup 0 0 CODE 0 powerup -
 VAL@variable 28 0 BANK0 1 cstackBANK0 dist/default/production\p1_master.X.production.o
 I2C_Master_Read@a 20 0 BANK0 1 cstackBANK0 dist/default/production\p1_master.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\sg48.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\sg48.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\sg48.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\sg48.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\sg48.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\sg48.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\s5tk.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\s5tk.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\s5tk.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\s5tk.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\s5tk.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\s5tk.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 ___bmul@multiplicand 70 0 COMMON 1 cstackCOMMON dist/default/production\p1_master.X.production.o
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\p1_master.X.production.o
@@ -760,8 +760,8 @@ __end_of___lldiv 1D50 0 CODE 0 text3 dist/default/production\p1_master.X.product
 __end_of___lwdiv 1B34 0 CODE 0 text12 dist/default/production\p1_master.X.production.o
 _valor_Servo 58 0 BANK0 1 bssBANK0 dist/default/production\p1_master.X.production.o
 __Umul8_16@multiplicand 20 0 BANK0 1 cstackBANK0 dist/default/production\p1_master.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\brand\AppData\Local\Temp\sg48.o
-___stacklo 0 0 ABS 0 - C:\Users\brand\AppData\Local\Temp\sg48.o
+___stackhi 0 0 ABS 0 - C:\Users\brand\AppData\Local\Temp\s5tk.o
+___stacklo 0 0 ABS 0 - C:\Users\brand\AppData\Local\Temp\s5tk.o
 _val_USART 7B 0 COMMON 1 bssCOMMON dist/default/production\p1_master.X.production.o
 _BAUDCTLbits 187 0 ABS 0 - dist/default/production\p1_master.X.production.o
 ___lwdiv@quotient 25 0 BANK0 1 cstackBANK0 dist/default/production\p1_master.X.production.o
@@ -785,7 +785,7 @@ _SSPCON 14 0 ABS 0 - dist/default/production\p1_master.X.production.o
 _TRISC3 43B 0 ABS 0 - dist/default/production\p1_master.X.production.o
 _TRISC4 43C 0 ABS 0 - dist/default/production\p1_master.X.production.o
 __size_of_Lcd_Cmd 0 0 ABS 0 - dist/default/production\p1_master.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\brand\AppData\Local\Temp\sg48.o
+___int_sp 0 0 STACK 2 stack C:\Users\brand\AppData\Local\Temp\s5tk.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -873,7 +873,7 @@ __size_of_Lcd_Write_String 0 0 ABS 0 - dist/default/production\p1_master.X.produ
 __stringtab 1000 0 STRING 0 strings dist/default/production\p1_master.X.production.o
 Lcd_Write_String@a 27 0 BANK0 1 cstackBANK0 dist/default/production\p1_master.X.production.o
 Lcd_Write_String@i 25 0 BANK0 1 cstackBANK0 dist/default/production\p1_master.X.production.o
-reset_vec 0 0 CODE 0 reset_vec C:\Users\brand\AppData\Local\Temp\sg48.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\brand\AppData\Local\Temp\s5tk.o
 __size_of_Lcd_Clear 0 0 ABS 0 - dist/default/production\p1_master.X.production.o
 __end_of___xxtofl F9A 0 CODE 0 text6 dist/default/production\p1_master.X.production.o
 __pdataBANK0 6F 0 BANK0 1 dataBANK0 dist/default/production\p1_master.X.production.o

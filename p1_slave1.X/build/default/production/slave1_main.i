@@ -2936,6 +2936,7 @@ void I2C_Slave_Init(uint8_t address);
 
 uint8_t valor_ADC = 0;
 uint8_t var;
+uint8_t valor_Servo = 0;
 
 void setup (void);
 
@@ -2945,6 +2946,21 @@ void __attribute__((picinterrupt((""))))isr(void){
      if (ADIF == 1){
 
         valor_ADC = ADC_READ();
+
+
+
+        if(valor_ADC>0xF0){
+                valor_Servo = 0x00;
+                CCPR2L = (valor_Servo>>1) + 128;
+                CCP2CONbits.DC2B1 = 0;
+                CCP2CONbits.DC2B0 = ADRESL>>7;
+            }else if(valor_ADC<=0x0F){
+                valor_Servo = 0xFF;
+                CCPR2L = (valor_Servo>>1) + 128;
+                CCP2CONbits.DC2B1 = 1;
+                CCP2CONbits.DC2B0 = ADRESL>>7;
+            }
+
 
         PIR1bits.ADIF = 0;
     }
@@ -2998,7 +3014,11 @@ void main (void){
         PORTB = valor_ADC;
         ADC_CHANNELS(0,valor_ADC,&valor_ADC);
         _delay((unsigned long)((10)*(8000000/4000.0)));
+
+
     }
+
+
 }
 
 
@@ -3011,6 +3031,7 @@ void setup(void){
     TRISD = 0X00;
     TRISE = 0X00;
     TRISB = 0X00;
+    TRISCbits.TRISC1= 0X00;
 
     PORTA = 0X00;
     PORTB = 0X00;
@@ -3027,5 +3048,31 @@ void setup(void){
     ADC_INIT(0);
     INTCONbits.GIE = 1;
     INTCONbits.PEIE = 1;
+
+
+
+
+    PR2 = 250;
+    CCP1CONbits.P1M = 0;
+    CCP1CONbits.CCP1M = 0b00001100;
+    CCP2CONbits.CCP2M = 0b00001100;
+
+    CCPR1L = 0x0F;
+    CCPR2L = 0x0F;
+    CCP1CONbits.DC1B = 0;
+    CCP2CONbits.DC2B1 = 0;
+    CCP2CONbits.DC2B0 = 0;
+
+    PIR1bits.TMR2IF = 0;
+    T2CONbits.T2CKPS1 = 1;
+    T2CONbits.T2CKPS0 = 1;
+    T2CONbits.TMR2ON = 1;
+
+    while (!PIR1bits.TMR2IF);
+    PIR1bits.TMR2IF = 0;
+
+
+
+
     I2C_Slave_Init(0x70);
 }

@@ -11,7 +11,7 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\brand\AppData\Local\Temp\sdjk.o
+$C:\Users\brand\AppData\Local\Temp\s85k.o
 reset_vec CODE 0 0 0 3 2
 end_init CODE 0 C C 3 2
 config CONFIG 4 2007 2007 2 2
@@ -78,26 +78,26 @@ STRING 2E9-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\p1_slave2.X.production.o
-F cinit CODE >672:C:\Users\brand\AppData\Local\Temp\sdjk.s
-F cinit CODE >675:C:\Users\brand\AppData\Local\Temp\sdjk.s
-F cinit CODE >722:C:\Users\brand\AppData\Local\Temp\sdjk.s
-10 cinit CODE >723:C:\Users\brand\AppData\Local\Temp\sdjk.s
-11 cinit CODE >724:C:\Users\brand\AppData\Local\Temp\sdjk.s
-12 cinit CODE >725:C:\Users\brand\AppData\Local\Temp\sdjk.s
-13 cinit CODE >728:C:\Users\brand\AppData\Local\Temp\sdjk.s
-14 cinit CODE >729:C:\Users\brand\AppData\Local\Temp\sdjk.s
-15 cinit CODE >730:C:\Users\brand\AppData\Local\Temp\sdjk.s
-16 cinit CODE >731:C:\Users\brand\AppData\Local\Temp\sdjk.s
-17 cinit CODE >732:C:\Users\brand\AppData\Local\Temp\sdjk.s
-18 cinit CODE >733:C:\Users\brand\AppData\Local\Temp\sdjk.s
-19 cinit CODE >734:C:\Users\brand\AppData\Local\Temp\sdjk.s
-1A cinit CODE >735:C:\Users\brand\AppData\Local\Temp\sdjk.s
-1B cinit CODE >736:C:\Users\brand\AppData\Local\Temp\sdjk.s
-1C cinit CODE >737:C:\Users\brand\AppData\Local\Temp\sdjk.s
-1D cinit CODE >738:C:\Users\brand\AppData\Local\Temp\sdjk.s
-1E cinit CODE >744:C:\Users\brand\AppData\Local\Temp\sdjk.s
-1E cinit CODE >746:C:\Users\brand\AppData\Local\Temp\sdjk.s
-1F cinit CODE >747:C:\Users\brand\AppData\Local\Temp\sdjk.s
+F cinit CODE >672:C:\Users\brand\AppData\Local\Temp\s85k.s
+F cinit CODE >675:C:\Users\brand\AppData\Local\Temp\s85k.s
+F cinit CODE >722:C:\Users\brand\AppData\Local\Temp\s85k.s
+10 cinit CODE >723:C:\Users\brand\AppData\Local\Temp\s85k.s
+11 cinit CODE >724:C:\Users\brand\AppData\Local\Temp\s85k.s
+12 cinit CODE >725:C:\Users\brand\AppData\Local\Temp\s85k.s
+13 cinit CODE >728:C:\Users\brand\AppData\Local\Temp\s85k.s
+14 cinit CODE >729:C:\Users\brand\AppData\Local\Temp\s85k.s
+15 cinit CODE >730:C:\Users\brand\AppData\Local\Temp\s85k.s
+16 cinit CODE >731:C:\Users\brand\AppData\Local\Temp\s85k.s
+17 cinit CODE >732:C:\Users\brand\AppData\Local\Temp\s85k.s
+18 cinit CODE >733:C:\Users\brand\AppData\Local\Temp\s85k.s
+19 cinit CODE >734:C:\Users\brand\AppData\Local\Temp\s85k.s
+1A cinit CODE >735:C:\Users\brand\AppData\Local\Temp\s85k.s
+1B cinit CODE >736:C:\Users\brand\AppData\Local\Temp\s85k.s
+1C cinit CODE >737:C:\Users\brand\AppData\Local\Temp\s85k.s
+1D cinit CODE >738:C:\Users\brand\AppData\Local\Temp\s85k.s
+1E cinit CODE >744:C:\Users\brand\AppData\Local\Temp\s85k.s
+1E cinit CODE >746:C:\Users\brand\AppData\Local\Temp\s85k.s
+1F cinit CODE >747:C:\Users\brand\AppData\Local\Temp\s85k.s
 4 intentry CODE >69:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
 17A text8 CODE >69:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
 17A text8 CODE >78:C:\Users\brand\Downloads\UVG\SEXTO SEMESTRE\DIGITAL 2\PROYECTO_1\p1_slave2.X\slave2_main.c
@@ -275,12 +275,12 @@ __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 _BF 4A0 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _PEIE 5E 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\brand\AppData\Local\Temp\sdjk.o
+___sp 0 0 STACK 2 stack C:\Users\brand\AppData\Local\Temp\s85k.o
 _decT 33 0 BANK0 1 bssBANK0 dist/default/production\p1_slave2.X.production.o
 _main 44 0 CODE 0 maintext dist/default/production\p1_slave2.X.production.o
 _uniT 79 0 COMMON 1 bssCOMMON dist/default/production\p1_slave2.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
-start 18 0 CODE 0 init C:\Users\brand\AppData\Local\Temp\sdjk.o
+start 18 0 CODE 0 init C:\Users\brand\AppData\Local\Temp\s85k.o
 __size_of___awdiv 0 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
 __size_of___awmod 0 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
@@ -288,12 +288,12 @@ __HbssCOMMON 0 0 ABS 0 bssCOMMON -
 __Hpowerup 0 0 CODE 0 powerup -
 ___awmod@sign 22 0 BANK0 1 cstackBANK0 dist/default/production\p1_slave2.X.production.o
 _ReadData 468 0 CODE 0 text6 dist/default/production\p1_slave2.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\sdjk.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\sdjk.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\sdjk.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\sdjk.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\sdjk.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\sdjk.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\s85k.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\s85k.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\s85k.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\s85k.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\s85k.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\brand\AppData\Local\Temp\s85k.o
 __LbssCOMMON 0 0 ABS 0 bssCOMMON -
 _OSCCONbits 8F 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
@@ -310,8 +310,8 @@ ___awdiv@divisor 73 0 COMMON 1 cstackCOMMON dist/default/production\p1_slave2.X.
 __end_of___awdiv 2F4 0 CODE 0 text4 dist/default/production\p1_slave2.X.production.o
 __end_of___awmod 468 0 CODE 0 text3 dist/default/production\p1_slave2.X.production.o
 __size_of_StartSignal 0 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
-___stackhi 0 0 ABS 0 - C:\Users\brand\AppData\Local\Temp\sdjk.o
-___stacklo 0 0 ABS 0 - C:\Users\brand\AppData\Local\Temp\sdjk.o
+___stackhi 0 0 ABS 0 - C:\Users\brand\AppData\Local\Temp\s85k.o
+___stacklo 0 0 ABS 0 - C:\Users\brand\AppData\Local\Temp\s85k.o
 _I2C_Slave_Init 59E 0 CODE 0 text2 dist/default/production\p1_slave2.X.production.o
 __size_of_setup 0 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
 _T_byte1 78 0 COMMON 1 bssCOMMON dist/default/production\p1_slave2.X.production.o
@@ -327,7 +327,7 @@ _TRISC3 43B 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
 _TRISC4 43C 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
 _RH_byte1 77 0 COMMON 1 bssCOMMON dist/default/production\p1_slave2.X.production.o
 _RH_byte2 2F 0 BANK0 1 bssBANK0 dist/default/production\p1_slave2.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\brand\AppData\Local\Temp\sdjk.o
+___int_sp 0 0 STACK 2 stack C:\Users\brand\AppData\Local\Temp\s85k.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -375,7 +375,7 @@ _var 34 0 BANK0 1 bssBANK0 dist/default/production\p1_slave2.X.production.o
 saved_w 7E 0 ABS 0 - dist/default/production\p1_slave2.X.production.o
 __end_of_isr 3B2 0 CODE 0 text8 dist/default/production\p1_slave2.X.production.o
 __Lintentry 8 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\brand\AppData\Local\Temp\sdjk.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\brand\AppData\Local\Temp\s85k.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 _StartSignal 568 0 CODE 0 text5 dist/default/production\p1_slave2.X.production.o
 ___awmod@counter 21 0 BANK0 1 cstackBANK0 dist/default/production\p1_slave2.X.production.o
